@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Email to Google Talk (XMPP) Gateway</title>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="/js/emailtogtalk.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+    </head>
+<body>
+<div class="container">
+    <div class="navbar navbar-inverse">
+        <a class="navbar-brand" href="/"><i class="glyphicon glyphicon-envelope"></i> Email to Gtalk</a>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="span12">
+            <h1>Email to Google Talk (XMPP) Gateway</h1>
+
+            <p class="lead">A free service that allows you to create an email address that you can forward emails to which will be sent to you in the form of google talk chat messages.</p>
+            <p><b>Example use case:</b> You have a few very important emails that come in and you want to make sure you get to them as quick as possible. You're also on google talk all the time on your mobile devices.<br>
+                Simply create a filter in GMail that forwards those messages to your generated email address here, and those emails will be instantly relayed to you as they come in.</p>
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="span12">
+            <h2>Get started!</h2>
+            <p>
+                To get started enter your Google Talk (or other XMPP based) email address, and click Start. You will instantly get a unique email address to forward messages to.<br>
+                Also be sure to accept the google talk invitation which you should also see right away!
+            </p>
+            <form>
+                <div class="control-group">
+                    <div class="controls">
+                        <input class="span3" name="email" id="email" type="email" size="40" placeholder="email address" required>
+                        <button class="btn btn-primary" type="submit" id="btn_start">Start</button>
+                    </div>
+                </div>
+                <p id="info_form" class="hide alert alert-info span8"></p>
+            </form>
+        </div>
+    </div>
+
+    <div class="row" style="margin-top: 5em;">
+        <div class="span12">
+            <p>This free service is powered by <a href="https://developers.google.com/appengine/">Google App Engine</a> and developed by <a target="_window" href="https://plus.google.com/107475160904974260828/posts">artooro</a>.</p>
+        </div>
+        <div class="span12">
+            <h4>Privacy</h4>
+            <p>Your email address is stored in the backend because we have no choice. It's needed to relay you the messages. We do not store or read any emails or chat messages. They are passed right through. Your usage is logged for 90 days but includes no information about your emails.</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+application: emailtogtalk
+version: 2
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /
+  static_files: pages/home.html
+  upload: pages\/home\.html
+  secure: always
+
+- url: /favicon\.ico
+  static_files: favicon.ico
+  upload: favicon\.ico
+
+- url: /robots\.txt
+  static_files: robots.txt
+  upload: robots\.txt
+
+- url: /js
+  static_dir: js
+
+- url: /fonts
+  static_dir: fonts
+
+- url: /css
+  static_dir: css
+
+- url: /app/.*
+  script: application.app
+
+- url: /_ah/mail/.+
+  script: handle_incoming_email.app
+  login: admin
+
+
+libraries:
+- name: jinja2
+  version: latest
+
+inbound_services:
+- xmpp_message
+- mail
